@@ -1,30 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap|Signika Negative');
+
+body {
+    background-color: rgb(255, 218, 232);
+}
+
+footer {
+    color: #6b023c;
+    text-align: center;
+    font-family: "Signika Negative", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7em;
+}
+
+h1 {
+    color: #6b023c;
+    font-family: "Henny Penny", serif;
+    text-align: center;
+}
+
 nav {
-    height: 40px;
-    display: flex;
     align-items: center;
-    justify-content: space-evenly;
     background-color:  #6b023c;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
     margin: auto;
 }
 
 nav>ul {
-    padding: 0;
-    list-style-type: none;
     display: flex;
+    list-style-type: none;
+    padding: 0;
 }
 
 nav>ul>li>a {
+    color: #fff;
     font-weight: 700;
     margin: 0 25px;
-    color: #fff;
     text-decoration: none;
 }
 
 nav>ul>li>a:hover {
-    padding-bottom: 5px;
     box-shadow: inset 0 -2px 0 0 #fff;
+    font-size: 1.1em;
+    padding-bottom: 5px;
 }
 
-footer {
-    text-align: center;
+.page-container {
+    background-color: rgb(159, 45, 87);
+    margin: auto 15%;
+    padding: 2%;
+}
+
+.page-container>p {
+    color: white;
+    font-family: "Signika Negative", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+}
+
+#contact {
+    color: white;
+    padding-right: 1%;
 }

@@ -12,6 +12,10 @@ class Navigation extends HTMLElement {
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="artwork.html">Artwork</a></li>
                 </ul>
+
+                <ul>
+                    <li><a id="contact">Contact</a></li>
+                </ul>
             </nav>
         `;
     }
@@ -54,3 +58,5 @@ class Footer extends HTMLElement {
 }
 
 customElements.define('footer-component', Footer);
+
+const contact = document.getElementById("contact");
