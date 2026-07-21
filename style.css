@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap|Signika Negative');
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
 
 body {
     background-color: white;
@@ -17,11 +18,14 @@ h1 {
     color: #6b023c;
     font-family: "Henny Penny", serif;
     text-align: center;
+    font-size: 3em;
+    margin: 0.4em;
 }
 
 nav {
     align-items: center;
     background-color:  #6b023c;
+    border-radius: 10px;
     display: flex;
     height: 40px;
     justify-content: space-between;
@@ -68,23 +72,42 @@ p > a:hover {
 
 #popupclose:hover {
     font-weight: bold;
-    background-color:rgb(161, 25, 93)
+    background-color:rgb(161, 25, 93);
+    cursor: pointer;
+}
+
+#popupX {
+    color: rgb(185, 40, 113);
+    font-family: "Ultra", Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    display: block;
+    text-align: right;
+    position: relative;
+}
+
+#popupX:hover {
+    animation: x 3s linear;
+    animation-fill-mode: forwards;
+    cursor: pointer;
 }
 
 .background-cover {
     background-color: rgba(0, 0, 0, 0.5);
-    visibility: hidden;
     z-index: 1;
-}
-
-.background-cover .show {
-    visibility: visible;
+    position: fixed;
+    display: none;
+    width: 120%;
+    height: 120%;
+    top: -20%;
+    left: -20%;
 }
 
 .page-container {
     background-color: rgb(185, 40, 113);
     margin: auto 15%;
     padding: 2%;
+    border-radius: 10px;
 }
 
 .page-container > p {
@@ -109,12 +132,20 @@ p > a:hover {
     z-index: 2;
     border-radius: 5px;
     padding: 8vh;
+    margin-top: 6em;
 }
 
 .popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+}
+
+.subtitle {
+    color: #6b023c;
+    text-align: center;
+    font-family: "Signika Negative", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7em;
 }
 
 @-webkit-keyframes fadeIn {
@@ -125,4 +156,17 @@ p > a:hover {
 @keyframes fadeIn {
     from {opacity: 0}
     to {opacity: 1}
+}
+
+@keyframes x {
+    0% {
+        font-size: 1.5em;
+    }
+
+    50% {
+        font-size: 2em;
+    }
+    100% {
+        font-size: 1.5em;
+    }
 }

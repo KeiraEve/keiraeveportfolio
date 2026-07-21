@@ -14,14 +14,15 @@ class Navigation extends HTMLElement {
                 </ul>
 
                 <ul>
-                    <li><a onclick="contactMe()">Contact</a></li>
+                    <li><a onclick="contactMe()" id="contacttext">Contact</a></li>
                 </ul>
             </nav>
 
-            <div id="bg-cover" class="bg-cover"></div>
+            <div id="bg-cover" class="background-cover"></div>
 
             <div id="popup" class="popup">
                 <div id="contact" class="popuptext">
+                    <p onclick="contactMe()" id="popupX">X</p>
                     <p style="font-size: 0.7em">Find me...</p>
                     <p>On <a href="https://github.com/KeiraEve">GitHub</a></p>
                     <p>keiraevechapman@gmail.com</p>
@@ -36,8 +37,15 @@ class Navigation extends HTMLElement {
 function contactMe() {
     var popup = document.getElementById("contact");
     var bg = document.getElementById("bg-cover");
+    var contact = document.getElementById("contacttext");
     popup.classList.toggle("show");
-    bg.classList.toggle("show");
+    if (bg.style.display == "block") {
+        bg.style.display = "none";
+        contact.style.zIndex = 0;
+    } else { 
+        bg.style.display = "block";
+        contact.style.zIndex = 10;
+    }
 }
 
 customElements.define('navigation-component', Navigation);
