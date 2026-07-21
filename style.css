@@ -22,6 +22,14 @@ h1 {
     margin: 0.4em;
 }
 
+h2 {
+    color: white;
+    font-family: "Henny Penny", serif;
+    text-align: center;
+    font-size: 2em;
+    margin: 0.4em;
+}
+
 nav {
     align-items: center;
     background-color:  #6b023c;
