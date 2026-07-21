@@ -30,6 +30,14 @@ h2 {
     margin: 0.4em;
 }
 
+h3 {
+    color: rgb(255, 201, 228);
+    font-family: "Henny Penny", serif;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0.4em;
+}
+
 nav {
     align-items: center;
     background-color:  #6b023c;
@@ -95,9 +103,9 @@ p > a:hover {
 }
 
 #popupX:hover {
-    animation: x 3s linear;
-    animation-fill-mode: forwards;
+    font-size: 1.6em;
     cursor: pointer;
+    color: rgb(161, 25, 93);
 }
 
 .background-cover {
@@ -111,17 +119,50 @@ p > a:hover {
     left: -20%;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flex-container .page-container {
+    margin: 0 1vw;
+}
+
 .page-container {
-    background-color: rgb(185, 40, 113);
+    background-image: linear-gradient(to top, rgb(185, 40, 113), #800147);
     margin: auto 15%;
     padding: 2%;
     border-radius: 10px;
+}
+
+.page-container hr {
+    margin: 2em 0;
 }
 
 .page-container > p {
     color: white;
     font-family: "Signika Negative", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.9em;
+    text-align: center;
+}
+
+.page-container ul {
+    color: white;
+    font-family: "Signika Negative", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+}
+
+.page-container ul li {
+    padding: 0.5em;
+    margin: 0 3vw;
+}
+
+.page-container .subtitle {
+    color: rgb(255, 201, 228);
+    text-align: center;
+    font-family: "Signika Negative", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7em;
 }
 
 .popup {
@@ -164,17 +205,4 @@ p > a:hover {
 @keyframes fadeIn {
     from {opacity: 0}
     to {opacity: 1}
-}
-
-@keyframes x {
-    0% {
-        font-size: 1.5em;
-    }
-
-    50% {
-        font-size: 2em;
-    }
-    100% {
-        font-size: 1.5em;
-    }
 }
