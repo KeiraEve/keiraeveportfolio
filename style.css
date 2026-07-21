@@ -28,23 +28,57 @@ nav {
     margin: auto;
 }
 
-nav>ul {
+nav > ul {
     display: flex;
     list-style-type: none;
     padding: 0;
 }
 
-nav>ul>li>a {
+nav > ul > li > a {
     color: #fff;
     font-weight: 700;
     margin: 0 25px;
     text-decoration: none;
 }
 
-nav>ul>li>a:hover {
+nav > ul > li > a:hover {
     box-shadow: inset 0 -2px 0 0 #fff;
     font-size: 1.1em;
     padding-bottom: 5px;
+}
+
+p > a {
+    color: white;
+}
+
+p > a:hover {
+    color:rgb(255, 154, 205)
+}
+
+#popupclose {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgb(185, 40, 113);
+    color: white;
+    font-family: "Signika Negative", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7em;
+}
+
+#popupclose:hover {
+    font-weight: bold;
+    background-color:rgb(161, 25, 93)
+}
+
+.background-cover {
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    z-index: 1;
+}
+
+.background-cover .show {
+    visibility: visible;
 }
 
 .page-container {
@@ -53,13 +87,42 @@ nav>ul>li>a:hover {
     padding: 2%;
 }
 
-.page-container>p {
+.page-container > p {
     color: white;
     font-family: "Signika Negative", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.9em;
 }
 
-#contact {
+.popup {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.popup .popuptext {
+    visibility: hidden;
+    background-color: #2e001b;
     color: white;
-    padding-right: 1%;
+    font-family: "Signika Negative", Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    position: fixed;
+    z-index: 2;
+    border-radius: 5px;
+    padding: 8vh;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
 }
