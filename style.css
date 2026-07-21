@@ -119,6 +119,11 @@ p > a:hover {
     left: -20%;
 }
 
+.flex-child {
+    width: 45%;
+    margin: 2%;
+}
+
 .flex-container {
     display: flex;
     justify-content: center;
