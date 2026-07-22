@@ -130,20 +130,23 @@ p > a:hover {
 .flex-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-content: center;
+    overflow: hidden;
 }
 
 .flex-container>ul {
     list-style: none;
     display: flex;
-    flex-wrap: column wrap;
-    margin: 0;
+    flex-flow: column wrap;
+    padding-left: 0;
 }
 
 .flex-container ul li img {
-    max-height: 100%;
+    max-width: 150%;
     object-fit: contain;
     vertical-align: bottom;
+    align-self: center;
+    margin: 0.5vh 0;
 }
 
 .flex-container .page-container {
@@ -187,7 +190,9 @@ p > a:hover {
 }
 
 .page-container .flex-container ul li {
-    height: 40vh;
+    width: 40vh;
+    display: flex;
+    justify-content: center;
     flex-grow: 1;
     margin: 0;
     padding: 0;
@@ -236,5 +241,6 @@ p > a:hover {
 }
 
 @media (max-width: 600px) {
-    nav > ul > li > a {}
+    nav > ul > li > a { margin: 0 1.5vw}
+    .flex-container ul li img {max-width: 75%}
 }
