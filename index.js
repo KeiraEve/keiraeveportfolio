@@ -59,7 +59,8 @@ class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <header>
-                <h1>Keira Chapman</h1>
+                <h1>Keira Chapman<span class="smalltitle">'s</span></h1>
+                <p class="smalltitle" style="margin: -5vh 0 0 300px">Portfolio</p>
             </header>
         `;
     }

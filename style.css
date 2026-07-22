@@ -223,6 +223,14 @@ p > a:hover {
     animation: fadeIn 1s;
 }
 
+.smalltitle {
+    color: #6b023c;
+    font-family: "Henny Penny", serif;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 0.4em;
+}
+
 .subtitle {
     color: #6b023c;
     text-align: center;
